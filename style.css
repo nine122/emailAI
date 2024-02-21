@@ -16,13 +16,12 @@ a{
 body{
     font-family: Arial, Helvetica, sans-serif;
 
+    width: 144rem;
+    margin: 0 auto;
     background-color: white;
 }
 
-.container{
-    width: 144rem;
-    margin: 0 auto;
-}
+
 
 .header{
     background-color: #758AFF;
@@ -161,33 +160,37 @@ button:hover {
     margin-left: 58rem;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 440px) {
+    body{
+        width: 45rem;
+    } 
 
     .header, .content{
-        width: 39rem;
-    }
+        width: 45rem;
+    } 
 
     .main_rect{
-        width: 39rem;
+        width: 45rem;
         flex-direction: column;
         margin: 0 ;
     }
 
+
 button {
-    margin: 2rem 2rem 2rem 14rem;
+    margin: 2rem 2rem 2rem 18rem;
 }
 
 .form_text{
-    margin-left: 5rem;
+    margin-left: 8rem;
 }
 
 .select{
-    margin: 2rem 0 1rem 14.5rem;
+    margin: 2rem 0 1rem 19rem;
 }
 
 input, textarea {
     width: 30rem;
-    margin: 1rem 4.5rem;
+    margin: 1rem 8rem;
     padding: 1rem;
 }
 
