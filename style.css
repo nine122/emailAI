@@ -192,6 +192,21 @@ button:hover {
         width: 100%;
         padding: 1rem;
     }
+    .image h1{
+        width: 30rem;
+        font-size: 3.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .image p{
+        width: 30rem;
+        font-size: 1rem;
+    }
+
+    .contact *{
+        font-size: 1.2rem;
+    }
+
     .form{
         width: 100%;
         border-left: 1.5px solid rgb(0, 0, 0, 30%);
