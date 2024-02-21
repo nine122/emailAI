@@ -164,18 +164,18 @@ button:hover {
 
 @media screen and (max-width: 480px) {
 
-    .header .content{
-        width: 38rem;
+    .header, .content{
+        width: 39rem;
     }
 
     .main_rect{
-        width: 38rem;
+        width: 39rem;
         flex-direction: column;
         margin: 0 ;
     }
 
 button {
-    margin: 2rem 2rem 2rem 6rem;
+    margin: 2rem 2rem 2rem 14rem;
 }
 
 .form_text{
@@ -183,7 +183,7 @@ button {
 }
 
 .select{
-    margin: 2rem 0 1rem 15rem;
+    margin: 2rem 0 1rem 14rem;
 }
 
 input, textarea {
