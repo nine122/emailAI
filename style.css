@@ -15,10 +15,12 @@ a{
 
 body{
     font-family: Arial, Helvetica, sans-serif;
+}
 
-    width: 144rem;
+.container{
+    max-width: 144rem;
+    
     margin: 0 auto;
-    background-color: white;
 }
 
 
@@ -31,25 +33,21 @@ body{
 }
 
 .content{
-    width: 144rem;
     background-color: #ffffff;
-    
+    width: 100%;
     border-radius: 1.5rem;
-    
 }
 
 .main_rect{
     display: flex;
-    width: 120rem;
-    /* height: 50.6rem; */
+    width: 85%;
     
     margin: 8rem auto 8rem auto;
-    
-    
 }
 
 .image{
-    flex-basis: 40%;
+    /* flex-basis: 40%; */
+    width: 40%;
     background-color: #F1FAEE;
     color: #758AFF;
     padding: 2.5rem;
@@ -66,7 +64,6 @@ body{
     font-size: 3.6rem;
     padding-left: 5rem;
     font-weight: 900;
-
 }
 
 .image p{
@@ -81,7 +78,7 @@ body{
 
 
 .form{
-    flex-basis: 60%;
+    width: 60%;
     border-top:1.5px solid rgb(0, 0, 0, 30%);
     border-right:1.5px solid rgb(0, 0, 0, 30%);
     border-bottom: 1.5px solid rgb(0, 0, 0, 30%);
@@ -89,7 +86,7 @@ body{
 }
 
 .img{
-    width: 27rem;
+    width: 70%;
     margin-top: -6rem;
 }
 
@@ -112,8 +109,7 @@ label {
 
 input,
 textarea {
-    width: 70%;
-    width: 60rem;
+    width: 80%;
     margin: 2rem 3rem 1.5rem 6rem;
     padding: 1rem;
     border: 1.3px solid #1d1d1dd2;
@@ -123,6 +119,18 @@ textarea {
     filter: drop-shadow(rgba(0, 0, 0, 0.3) 0.1rem 0.1rem);
 }
 
+.lan{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem 2rem;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+}
+
 button {
     background-color: #758AFF;
     color: #fff;
@@ -130,12 +138,13 @@ button {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    margin-top: 1rem;
-    margin-left: 56.5rem;
+    width: auto;
+    margin-top: 1rem 8rem 1rem 0;
+    
 }
 
 button:hover {
-    background-color: #758AFF;
+    background-color: #c1c2c5;
 }
 
 .form_text{
@@ -161,37 +170,46 @@ button:hover {
 }
 
 @media screen and (max-width: 440px) {
-    body{
-        width: 45rem;
-    } 
+    /* body{
+        width: 43rem;
+    } */
+    .container{
+        margin: auto;
+    }
 
-    .header, .content{
-        width: 45rem;
-    } 
+    .header{
+        border-radius: 0.2rem;
+    }
 
     .main_rect{
-        width: 45rem;
+        /* width: 43rem; */
         flex-direction: column;
-        margin: 0 ;
+        margin: auto ;
+    }
+
+    .image{
+        color: #758AFF;
+        width: 100%;
+        padding: 1rem;
+    }
+    .form{
+        width: 100%;
+        border-left: 1.5px solid rgb(0, 0, 0, 30%);
+    }
+
+    .btn{
+        justify-content: center;
     }
 
 
-button {
-    margin: 2rem 2rem 2rem 18rem;
-}
-
 .form_text{
-    margin-left: 8rem;
+    margin: 1.2rem;
 }
 
-.select{
-    margin: 2rem 0 1rem 19rem;
-}
 
 input, textarea {
-    width: 30rem;
-    margin: 1rem 8rem;
-    padding: 1rem;
+    width: 95%;
+    margin: 1rem;
 }
 
 .contact{
