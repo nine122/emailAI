@@ -21,7 +21,6 @@ body{
 
 .container{
     width: 144rem;
-    height: 1024px;
     margin: 0 auto;
 }
 
@@ -34,7 +33,6 @@ body{
 
 .content{
     width: 144rem;
-    height: 95rem;
     background-color: #ffffff;
     
     border-radius: 1.5rem;
@@ -118,6 +116,7 @@ textarea {
     width: 70%;
     width: 60rem;
     margin: 2rem 3rem 1.5rem 6rem;
+    padding: 1rem;
     border: 1.3px solid #1d1d1dd2;
     border-radius: 6px;
     font-size: 1.5rem;
@@ -183,12 +182,13 @@ button {
 }
 
 .select{
-    margin: 2rem 0 1rem 14rem;
+    margin: 2rem 0 1rem 14.5rem;
 }
 
 input, textarea {
     width: 30rem;
     margin: 1rem 4.5rem;
+    padding: 1rem;
 }
 
 .contact{
