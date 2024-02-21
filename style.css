@@ -1,0 +1,197 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+a{
+    text-decoration: none;
+    color: #758AFF;
+    font-size: 1.4rem;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: white;
+}
+
+.container{
+    width: 144rem;
+    height: 1024px;
+    margin: 0 auto;
+}
+
+.header{
+    background-color: #758AFF;
+    width: 100%;
+    height: 7.4rem;
+    border-radius: 1.5rem;
+}
+
+.content{
+    width: 144rem;
+    height: 95rem;
+    background-color: #ffffff;
+    
+    border-radius: 1.5rem;
+    
+}
+
+.main_rect{
+    display: flex;
+    width: 120rem;
+    /* height: 50.6rem; */
+    
+    margin: 8rem auto 8rem auto;
+    
+    
+}
+
+.image{
+    flex-basis: 40%;
+    background-color: #F1FAEE;
+    color: #758AFF;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.image h1{
+    width: 37rem;
+    height: 12rem;
+    font-size: 3.6rem;
+    padding-left: 5rem;
+    font-weight: 900;
+
+}
+
+.image p{
+    
+    width: 37rem;
+    height: 12rem;
+    font-size: 1.3rem;
+    opacity: 50%;
+    padding: 0.5rem;
+    padding-left: 1.3rem;
+}
+
+
+.form{
+    flex-basis: 60%;
+    border-top:1.5px solid rgb(0, 0, 0, 30%);
+    border-right:1.5px solid rgb(0, 0, 0, 30%);
+    border-bottom: 1.5px solid rgb(0, 0, 0, 30%);
+    border-radius: 1rem;
+}
+
+.img{
+    width: 27rem;
+    margin-top: -6rem;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.firstbox{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.name, .email {
+    width: 22rem;
+}
+
+
+input,
+textarea {
+    width: 70%;
+    width: 60rem;
+    margin: 2rem 3rem 1.5rem 6rem;
+    border: 1.3px solid #1d1d1dd2;
+    border-radius: 6px;
+    font-size: 1.5rem;
+    
+    filter: drop-shadow(rgba(0, 0, 0, 0.3) 0.1rem 0.1rem);
+}
+
+button {
+    background-color: #758AFF;
+    color: #fff;
+    padding: 10px 20px 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+    margin-left: 56.5rem;
+}
+
+button:hover {
+    background-color: #758AFF;
+}
+
+.form_text{
+    font-size: 1.5rem;
+    margin-left: 6rem;
+}
+
+.contact{
+    display: flex;
+    gap: 8rem;
+    padding: 1rem;
+}
+
+
+.icon{
+    color: #000000;
+    padding: 0.5rem;
+}
+
+.select{
+    margin-top: 3rem;
+    margin-left: 58rem;
+}
+
+@media screen and (max-width: 480px) {
+
+    .header .content{
+        width: 38rem;
+    }
+
+    .main_rect{
+        width: 38rem;
+        flex-direction: column;
+        margin: 0 ;
+    }
+
+button {
+    margin: 2rem 2rem 2rem 6rem;
+}
+
+.form_text{
+    margin-left: 5rem;
+}
+
+.select{
+    margin: 2rem 0 1rem 15rem;
+}
+
+input, textarea {
+    width: 30rem;
+    margin: 1rem 4.5rem;
+}
+
+.contact{
+    gap: 4rem;
+}
+  }
