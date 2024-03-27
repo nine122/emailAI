@@ -1,203 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>email poh chin tr poh</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
-
-    <link rel="stylesheet" href="style.css">
-    
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="container">
-        <div class="header">
-        </div>
-        <div class="content">
-            <div class="main_rect">
-                <div class="image">
-                    <h1>let’s talk 
-                        about everything!</h1>
-                    <p>Have a question or want to get in touch? We'd love 
-                        to hear from you. Feel free to reach out and we'll get
-                         back to you as soon as possible.</p>
-                    <img class="img" src="./pic.png" alt="">
-                    <div class="contact">
-                        <div class="mail">
-                            <i class="fa fa-envelope fa-2x" aria-hidden="true"></i>
-                            <a href="yourmail@gmail.com"><i>yourmail@gmail.com</i></a>
-                        </div>
-                        <div class="phone">
-                            <i class="fa fa-phone fa-2x" aria-hidden="true"></i>
-                            <a href="tel:0912345689">0912345689</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="form">
-                    <div class="lan">
-                      <select name="language" class="select" id="select">
-                        <option value="english" selected>English</option>
-                        <option value="chinese">Chinese</option>
-                        <option value="japanese">Japanese</option>
-                        <option value="thai">Thai</option>
-                        <option value="arabic">Arabic</option>
-                    </select>
-                    </div>
-                    
-                    <label for="message" class="form_text">Message</label>
-                    <textarea id="message" name="message"  rows="6" required></textarea>
-                    
-                    <div class="btn">
-                      <button id="generate_btn">Generate</button>
-                    </div>
-                    
-                    
-                    <label for="" class="form_text">Response</label>
-                    <textarea id="response" name="" rows="12" required></textarea>
-                    
-                    
-                </div>
+      <div class="header"></div>
+      <div class="content">
+        <div class="main_rect">
+          <div class="image">
+            <h1>let’s talk about everything!</h1>
+            <p>
+              Have a question or want to get in touch? We'd love to hear from
+              you. Feel free to reach out and we'll get back to you as soon as
+              possible.
+            </p>
+            <img class="img" src="./pic.png" alt="" />
+            <div class="contact">
+              <div class="mail">
+                <i class="fa fa-envelope fa-2x" aria-hidden="true"></i>
+                <a href="yourmail@gmail.com"><i>yourmail@gmail.com</i></a>
+              </div>
+              <div class="phone">
+                <i class="fa fa-phone fa-2x" aria-hidden="true"></i>
+                <a href="tel:0912345689">0912345689</a>
+              </div>
             </div>
+          </div>
+          <div class="form">
+            <div class="lan">
+              <select name="language" class="select" id="select">
+                <option value="english" selected>English</option>
+                <option value="chinese">Chinese</option>
+                <option value="japanese">Japanese</option>
+                <option value="thai">Thai</option>
+                <option value="arabic">Arabic</option>
+              </select>
+            </div>
+
+            <label for="message" class="form_text">Message</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+
+            <div class="btn">
+              <button id="generate_btn">Generate</button>
+            </div>
+
+            <label for="" class="form_text">Response</label>
+            <textarea id="response" name="" rows="12" required></textarea>
+          </div>
         </div>
+      </div>
     </div>
 
+    <!-- javascript -->
 
-
-<!-- javascript -->
-  
-
-<script type="importmap">
-    {
-      "imports": {
-        "@google/generative-ai": "https://esm.run/@google/generative-ai"
+    <script type="importmap">
+      {
+        "imports": {
+          "@google/generative-ai": "https://esm.run/@google/generative-ai"
+        }
       }
-    }
-</script>
-<script type="module">
-    import { GoogleGenerativeAI } from "@google/generative-ai";
+    </script>
+    <script type="module">
+      import { GoogleGenerativeAI } from "@google/generative-ai";
 
-    // Fetch your API_KEY
-    const API_KEY = "AIzaSyADll42JdiNp19-dLLePWRCuwA_xWL848A";
+      // Fetch your API_KEY
+      const API_KEY = "AIzaSyDvFlDw1Wc_fwdCW-w_-miRmjZgmhPks68";
 
-    // Access your API key (see "Set up your API key" above)
-    const genAI = new GoogleGenerativeAI(API_KEY);
+      // Access your API key (see "Set up your API key" above)
+      const genAI = new GoogleGenerativeAI(API_KEY);
 
-document.addEventListener("DOMContentLoaded", function() {
-  // Get references to both message boxes
-  var firstMessageBox = document.getElementById("message");
-  var secondMessageBox = document.getElementById("response");
-  var generateButton = document.getElementById("generate_btn");
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get references to both message boxes
+        var firstMessageBox = document.getElementById("message");
+        var secondMessageBox = document.getElementById("response");
+        var generateButton = document.getElementById("generate_btn");
 
-  // click function
-  generateButton.addEventListener("click", function() {
-      // Get the value from the first message box
+        // click function
+        generateButton.addEventListener("click", function () {
+          // Get the value from the first message box
 
+          const language = document.getElementById("select").value;
+          switch (language) {
+            case "english":
+              var firstMessageValue = firstMessageBox.value + "in english";
+              break;
+            case "chinese":
+              var firstMessageValue = firstMessageBox.value + "in chinese";
+              break;
+            case "japanese":
+              var firstMessageValue = firstMessageBox.value + "in japanese";
+              break;
+            case "thai":
+              var firstMessageValue = firstMessageBox.value + "in thai";
+              break;
+            case "arabic":
+              var firstMessageValue = firstMessageBox.value + "in arabic";
+              break;
+            default:
+              var firstMessageValue = firstMessageBox.value;
+          }
 
-      const language = document.getElementById('select').value;
-      switch (language) {
-        case 'english':
-          var firstMessageValue = firstMessageBox.value+ "in english";
-          break;
-        case 'chinese':
-          var firstMessageValue = firstMessageBox.value+ "in chinese";
-          break;
-        case 'japanese':
-          var firstMessageValue = firstMessageBox.value+ "in japanese";
-          break;
-        case 'thai':
-          var firstMessageValue = firstMessageBox.value+ "in thai";
-          break;
-        case 'arabic':
-          var firstMessageValue = firstMessageBox.value+ "in arabic";
-          break;
-        default:
-          var firstMessageValue = firstMessageBox.value;
-};
+          //Gemini API function
+          async function run() {
+            const model = genAI.getGenerativeModel({ model: "gemini-pro" });
 
-//Gemini API function
-  async function run() {
-    const model = genAI.getGenerativeModel({ model: "gemini-pro"});
+            const chat = model.startChat({
+              history: [
+                {
+                  role: "user",
+                  parts: [{ text: "How do I place an order?" }],
+                },
+                {
+                  role: "model",
+                  parts: [
+                    {
+                      text: "You can place an order through our website or mobile app. Simply browse the menus of participating restaurants, add items to your cart, and complete checkout.",
+                    },
+                  ],
+                },
 
-    const chat = model.startChat({
-  history: [
+                {
+                  role: "user",
+                  parts: [{ text: "What payment methods do you accept?" }],
+                },
+                {
+                  role: "model",
+                  parts: [
+                    {
+                      text: "We accept payment by credit card, debit card, and some online wallets. Check the checkout page for available options.",
+                    },
+                  ],
+                },
 
-    {
-      role: "user",
-      parts: "How do I place an order?",
-    },
-    {
-      role: "model",
-      parts: "You can place an order through our website or mobile app. Simply browse the menus of participating restaurants, add items to your cart, and complete checkout.",
-    },
+                {
+                  role: "user",
+                  parts: [
+                    { text: "Can I schedule my order for a later time?" },
+                  ],
+                },
+                {
+                  role: "model",
+                  parts: [
+                    {
+                      text: "Yes, many restaurants offer order scheduling through our platform.",
+                    },
+                  ],
+                },
 
-    {
-      role: "user",
-      parts: "What payment methods do you accept?",
-    },
-    {
-      role: "model",
-      parts: "We accept payment by credit card, debit card, and some online wallets. Check the checkout page for available options.",
-    },
+                {
+                  role: "user",
+                  parts: [{ text: "What is the minimum order amount?" }],
+                },
+                {
+                  role: "model",
+                  parts: [
+                    {
+                      text: "The minimum order amount varies by restaurant. You can find this information on the restaurant's page.",
+                    },
+                  ],
+                },
 
-    {
-      role: "user",
-      parts: "Can I schedule my order for a later time?",
-    },
-    {
-      role: "model",
-      parts: "Yes, many restaurants offer order scheduling through our platform.",
-    },
+                {
+                  role: "user",
+                  parts: [{ text: "Can I track my order?" }],
+                },
+                {
+                  role: "model",
+                  parts: [
+                    {
+                      text: "Yes, you can track your order in real-time through our website or app",
+                    },
+                  ],
+                },
 
-    {
-      role: "user",
-      parts: "What is the minimum order amount?",
-    },
-    {
-      role: "model",
-      parts: "The minimum order amount varies by restaurant. You can find this information on the restaurant's page.",
-    },
+                {
+                  role: "user",
+                  parts: [{ text: "When is your shop opening time?" }],
+                },
+                {
+                  role: "model",
+                  parts: [{ text: "opening time is 6AM" }],
+                },
+              ],
+              generationConfig: {
+                maxOutputTokens: 250000,
+              },
+            });
 
-    {
-      role: "user",
-      parts: "Can I track my order?",
-    },
-    {
-      role: "model",
-      parts: "Yes, you can track your order in real-time through our website or app",
-    },
+            const msg = firstMessageValue;
 
-    {
-      role: "user",
-      parts: "When is your shop opening time?",
-    },
-    {
-      role: "model",
-      parts: "opening time is 6AM",
-    },
-  ],
-  generationConfig: {
-    maxOutputTokens: 250000,
-  },
-});
+            const result = await chat.sendMessage(msg);
+            const response = await result.response;
+            const text = response.text();
 
-      const msg = firstMessageValue;
+            // Update the value of the second message box with the reply
+            secondMessageBox.value = text;
+          }
 
-      const result = await chat.sendMessage(msg);
-      const response = await result.response;
-      const text = response.text();
-
-      // Update the value of the second message box with the reply
-      secondMessageBox.value = text;
-  };
-
-  run();
-  });
-
-});
-
-
-</script>
-
-</body>
+          run();
+        });
+      });
+    </script>
+  </body>
 </html>
