@@ -90,23 +90,23 @@
 
           const language = document.getElementById("select").value;
           switch (language) {
-            case "english":
-              var firstMessageValue = firstMessageBox.value + "in english";
-              break;
+            // case "english":
+            //   var firstMessageValue = firstMessageBox.value + "in english";
+            //   break;
             case "chinese":
-              var firstMessageValue = firstMessageBox.value + "in chinese";
+              var firstMessageValue = firstMessageBox.value + "? in chinese";
               break;
             case "japanese":
-              var firstMessageValue = firstMessageBox.value + "in japanese";
+              var firstMessageValue = firstMessageBox.value + "? in japanese";
               break;
             case "thai":
-              var firstMessageValue = firstMessageBox.value + "in thai";
+              var firstMessageValue = firstMessageBox.value + "? in thai";
               break;
             case "arabic":
-              var firstMessageValue = firstMessageBox.value + "in arabic";
+              var firstMessageValue = firstMessageBox.value + "? in arabic";
               break;
             default:
-              var firstMessageValue = firstMessageBox.value;
+              var firstMessageValue = firstMessageBox.value + "?";
           }
 
           //Gemini API function
