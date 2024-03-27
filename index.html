@@ -84,6 +84,13 @@
         var secondMessageBox = document.getElementById("response");
         var generateButton = document.getElementById("generate_btn");
 
+        firstMessageBox.addEventListener("keydown", function (event) {
+          if (event.keyCode === 13) {
+            event.preventDefault(); // Prevent the default Enter key behavior (new line)
+            generateButton.click();
+          }
+        });
+
         // click function
         generateButton.addEventListener("click", function () {
           // Get the value from the first message box
